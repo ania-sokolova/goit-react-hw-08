@@ -1,0 +1,12 @@
+.contactCard {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #e9ecef;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 12px 16px;
+    margin-bottom: 12px;
+    transition: box-shadow 0.3s ease;
+  }
+  

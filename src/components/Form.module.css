@@ -1,0 +1,16 @@
+.formContainer {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.error {
+  color: red;
+  font-size: 0.85em;
+}

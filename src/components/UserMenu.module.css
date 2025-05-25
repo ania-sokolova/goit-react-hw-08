@@ -1,0 +1,14 @@
+.userMenu {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.welcome {
+  font-weight: 500;
+}
+
+.button {
+  padding: 5px 10px;
+  cursor: pointer;
+}
