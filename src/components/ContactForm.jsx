@@ -1,13 +1,13 @@
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import { useDispatch, useSelector } from 'react-redux';
-import { addContact } from '../redux/contactsOps';
-import { selectContacts } from '../redux/contactsSlice';
+import { addContact, fetchContacts } from '../redux/contacts/operations';
+
 import styles from './ContactForm.module.css';
 
 const ContactForm = () => {
   const dispatch  = useDispatch();
-  const contacts  = useSelector(selectContacts);
+  const contacts  = useSelector(fetchContacts);
 
   const initialValues = { name: '', number: '' };
   const schema = Yup.object({

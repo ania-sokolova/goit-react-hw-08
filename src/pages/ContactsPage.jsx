@@ -1,16 +1,24 @@
+import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { fetchContacts } from '../redux/contacts/operations';
+
 import ContactForm from '../components/ContactForm';
 import ContactList from '../components/ContactList';
-import Filter from '../components/Filter';
+import SearchBox from '../components/SearchBox';
 
-const ContactsPage = () => {
+export default function ContactsPage() {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchContacts());
+  }, [dispatch]);
+
   return (
-    <div style={{ padding: '20px' }}>
-      <h2>Your Contacts</h2>
+    <div>
+      <h1>Contacts</h1>
       <ContactForm />
-      <Filter />
+      <SearchBox />
       <ContactList />
     </div>
   );
-};
-
-export default ContactsPage;
+}
